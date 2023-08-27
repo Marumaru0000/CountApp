@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     var countNum = 0
+    var secondCountNum = 0
+    var thirdCountNum = 0
 
     @IBOutlet weak var countLabel: UILabel!
     
@@ -30,40 +32,53 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondCountLabel: UILabel!
     
     @IBAction func secondPlusCount(_ sender: UIButton) {
-        countNum += 1
-        countLabel.text = "\(countNum)"
+        secondCountNum += 1
+        secondCountLabel.text = "\(secondCountNum)"
     }
     @IBAction func secondMinusCount(_ sender: UIButton) {
-        countNum -= 1
-        countLabel.text = "\(countNum)"
+        secondCountNum -= 1
+        secondCountLabel.text = "\(secondCountNum)"
     }
     @IBAction func secondClearCount(_ sender: UIButton) {
-        countNum = 0
-        countLabel.text = "\(countNum)"
+        secondCountNum = 0
+        secondCountLabel.text = "\(secondCountNum)"
     }
     
     //3個目
     @IBOutlet weak var thirdCountLabel: UILabel!
     
     @IBAction func thirdPlusCount(_ sender: UIButton) {
-        countNum += 1
-        countLabel.text = "\(countNum)"
+        thirdCountNum += 1
+        thirdCountLabel.text = "\(thirdCountNum)"
     }
     
     @IBAction func thirdClearCount(_ sender: UIButton) {
-        countNum = 0
-        countLabel.text = "\(countNum)"
+        thirdCountNum = 0
+        thirdCountLabel.text = "\(thirdCountNum)"
     }
     
     @IBAction func thirdMinusCount(_ sender: UIButton) {
-        countNum -= 1
+        thirdCountNum -= 1
+        thirdCountLabel.text = "\(thirdCountNum)"
+    }
+    
+    //全て
+    
+    @IBAction func allClearButton(_ sender: UIButton) {
+        countNum = 0
         countLabel.text = "\(countNum)"
+        secondCountNum = 0
+        secondCountLabel.text = "\(secondCountNum)"
+        thirdCountNum = 0
+        thirdCountLabel.text = "\(thirdCountNum)"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         countLabel.text = "\(countNum)"
+        secondCountLabel.text = "\(secondCountNum)"
+        thirdCountLabel.text = "\(thirdCountNum)"
     }
 
 
